@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DCE93CBA2DA4C80400FE8528 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = DCE93CB92DA4C80400FE8528 /* Auth */; };
+		DCE93CBC2DA4C80400FE8528 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = DCE93CBB2DA4C80400FE8528 /* PostgREST */; };
+		DCE93CBE2DA4C80400FE8528 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = DCE93CBD2DA4C80400FE8528 /* Storage */; };
+		DCE93CC02DA4C80400FE8528 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = DCE93CBF2DA4C80400FE8528 /* Supabase */; };
+		DCE93CDE2DA4CF3B00FE8528 /* releases.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DCE93CDD2DA4CF3B00FE8528 /* releases.xcconfig */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		DC28EF5D2DA4BCA300F926B3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,11 +35,25 @@
 		DC28EF4F2DA4BCA100F926B3 /* strive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = strive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC28EF5C2DA4BCA300F926B3 /* striveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = striveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC28EF662DA4BCA300F926B3 /* striveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = striveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCE93CDD2DA4CF3B00FE8528 /* releases.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = releases.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DCE93D002DA56C9C00FE8528 /* Exceptions for "strive" folder in "strive" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = DC28EF4E2DA4BCA100F926B3 /* strive */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DC28EF512DA4BCA100F926B3 /* strive */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DCE93D002DA56C9C00FE8528 /* Exceptions for "strive" folder in "strive" target */,
+			);
 			path = strive;
 			sourceTree = "<group>";
 		};
@@ -52,6 +74,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCE93CC02DA4C80400FE8528 /* Supabase in Frameworks */,
+				DCE93CBE2DA4C80400FE8528 /* Storage in Frameworks */,
+				DCE93CBC2DA4C80400FE8528 /* PostgREST in Frameworks */,
+				DCE93CBA2DA4C80400FE8528 /* Auth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +105,7 @@
 				DC28EF5F2DA4BCA300F926B3 /* striveTests */,
 				DC28EF692DA4BCA300F926B3 /* striveUITests */,
 				DC28EF502DA4BCA100F926B3 /* Products */,
+				DCE93CDD2DA4CF3B00FE8528 /* releases.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +139,10 @@
 			);
 			name = strive;
 			packageProductDependencies = (
+				DCE93CB92DA4C80400FE8528 /* Auth */,
+				DCE93CBB2DA4C80400FE8528 /* PostgREST */,
+				DCE93CBD2DA4C80400FE8528 /* Storage */,
+				DCE93CBF2DA4C80400FE8528 /* Supabase */,
 			);
 			productName = strive;
 			productReference = DC28EF4F2DA4BCA100F926B3 /* strive.app */;
@@ -195,6 +226,9 @@
 			);
 			mainGroup = DC28EF462DA4BCA100F926B3;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DC28EF792DA4C58300F926B3 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DC28EF502DA4BCA100F926B3 /* Products */;
 			projectDirPath = "";
@@ -212,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCE93CDE2DA4CF3B00FE8528 /* releases.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +306,7 @@
 /* Begin XCBuildConfiguration section */
 		DC28EF6E2DA4BCA300F926B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCE93CDD2DA4CF3B00FE8528 /* releases.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -334,6 +370,7 @@
 		};
 		DC28EF6F2DA4BCA300F926B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCE93CDD2DA4CF3B00FE8528 /* releases.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -395,13 +432,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8GNSZM5GXB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = strive/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -422,13 +462,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8GNSZM5GXB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = strive/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -550,6 +593,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DC28EF792DA4C58300F926B3 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DCE93CB92DA4C80400FE8528 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC28EF792DA4C58300F926B3 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		DCE93CBB2DA4C80400FE8528 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC28EF792DA4C58300F926B3 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		DCE93CBD2DA4C80400FE8528 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC28EF792DA4C58300F926B3 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		DCE93CBF2DA4C80400FE8528 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC28EF792DA4C58300F926B3 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DC28EF472DA4BCA100F926B3 /* Project object */;
 }
