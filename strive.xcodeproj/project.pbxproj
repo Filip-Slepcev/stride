@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC7F34A22DA8C2E50063685E /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC7F34A02DA8C2E50063685E /* LICENSE.txt */; };
+		DC7F34A32DA8C2E50063685E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DC7F34A12DA8C2E50063685E /* README.md */; };
+		DC7F34A92DA8C4560063685E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DC7F34A82DA8C4510063685E /* .gitignore */; };
 		DCE93CBA2DA4C80400FE8528 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = DCE93CB92DA4C80400FE8528 /* Auth */; };
 		DCE93CBC2DA4C80400FE8528 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = DCE93CBB2DA4C80400FE8528 /* PostgREST */; };
 		DCE93CBE2DA4C80400FE8528 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = DCE93CBD2DA4C80400FE8528 /* Storage */; };
@@ -35,6 +38,9 @@
 		DC28EF4F2DA4BCA100F926B3 /* strive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = strive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC28EF5C2DA4BCA300F926B3 /* striveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = striveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC28EF662DA4BCA300F926B3 /* striveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = striveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC7F34A02DA8C2E50063685E /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		DC7F34A12DA8C2E50063685E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DC7F34A82DA8C4510063685E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DCE93CDD2DA4CF3B00FE8528 /* releases.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = releases.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,16 +61,6 @@
 				DCE93D002DA56C9C00FE8528 /* Exceptions for "strive" folder in "strive" target */,
 			);
 			path = strive;
-			sourceTree = "<group>";
-		};
-		DC28EF5F2DA4BCA300F926B3 /* striveTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = striveTests;
-			sourceTree = "<group>";
-		};
-		DC28EF692DA4BCA300F926B3 /* striveUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = striveUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -101,11 +97,12 @@
 		DC28EF462DA4BCA100F926B3 = {
 			isa = PBXGroup;
 			children = (
+				DC7F34A82DA8C4510063685E /* .gitignore */,
 				DC28EF512DA4BCA100F926B3 /* strive */,
-				DC28EF5F2DA4BCA300F926B3 /* striveTests */,
-				DC28EF692DA4BCA300F926B3 /* striveUITests */,
 				DC28EF502DA4BCA100F926B3 /* Products */,
 				DCE93CDD2DA4CF3B00FE8528 /* releases.xcconfig */,
+				DC7F34A02DA8C2E50063685E /* LICENSE.txt */,
+				DC7F34A12DA8C2E50063685E /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,9 +158,6 @@
 			dependencies = (
 				DC28EF5E2DA4BCA300F926B3 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				DC28EF5F2DA4BCA300F926B3 /* striveTests */,
-			);
 			name = striveTests;
 			packageProductDependencies = (
 			);
@@ -183,9 +177,6 @@
 			);
 			dependencies = (
 				DC28EF682DA4BCA300F926B3 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				DC28EF692DA4BCA300F926B3 /* striveUITests */,
 			);
 			name = striveUITests;
 			packageProductDependencies = (
@@ -246,6 +237,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7F34A92DA8C4560063685E /* .gitignore in Resources */,
+				DC7F34A22DA8C2E50063685E /* LICENSE.txt in Resources */,
+				DC7F34A32DA8C2E50063685E /* README.md in Resources */,
 				DCE93CDE2DA4CF3B00FE8528 /* releases.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
