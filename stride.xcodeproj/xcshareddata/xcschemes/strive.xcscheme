@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DC28EF4E2DA4BCA100F926B3"
-               BuildableName = "strive.app"
-               BlueprintName = "strive"
-               ReferencedContainer = "container:strive.xcodeproj">
+               BuildableName = "stride.app"
+               BlueprintName = "stride"
+               ReferencedContainer = "container:stride.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -36,9 +36,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DC28EF5B2DA4BCA300F926B3"
-               BuildableName = "striveTests.xctest"
-               BlueprintName = "striveTests"
-               ReferencedContainer = "container:strive.xcodeproj">
+               BuildableName = "strideTests.xctest"
+               BlueprintName = "strideTests"
+               ReferencedContainer = "container:stride.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DC28EF652DA4BCA300F926B3"
-               BuildableName = "striveUITests.xctest"
-               BlueprintName = "striveUITests"
-               ReferencedContainer = "container:strive.xcodeproj">
+               BuildableName = "strideUITests.xctest"
+               BlueprintName = "strideUITests"
+               ReferencedContainer = "container:stride.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC28EF4E2DA4BCA100F926B3"
-            BuildableName = "strive.app"
-            BlueprintName = "strive"
-            ReferencedContainer = "container:strive.xcodeproj">
+            BuildableName = "stride.app"
+            BlueprintName = "stride"
+            ReferencedContainer = "container:stride.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -88,9 +88,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DC28EF4E2DA4BCA100F926B3"
-            BuildableName = "strive.app"
-            BlueprintName = "strive"
-            ReferencedContainer = "container:strive.xcodeproj">
+            BuildableName = "stride.app"
+            BlueprintName = "stride"
+            ReferencedContainer = "container:stride.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

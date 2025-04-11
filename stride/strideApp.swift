@@ -2,15 +2,22 @@ import SwiftUI
 
 struct AppView: View {
     @StateObject private var activeUser = ActiveUser()
+    @State private var isLoading: Bool = true
 
     var body: some View {
-        Group {
-            if activeUser.loggedIn {
-                HomeView()
-                    .environmentObject(activeUser)
-            } else {
-                AuthView()
+        ZStack {
+            Group {
+                if activeUser.loggedIn {
+                    MainTabView()
+                        .environmentObject(activeUser)
+                        .transition(.move(edge: .trailing))
+                } else {
+                    if !isLoading { AuthView()
+                        .transition(.move(edge: .leading))
+                    }
+                }
             }
+            .animation(.easeInOut, value: activeUser.loggedIn)
         }
         .task {
             for await state in supabase.auth.authStateChanges {
@@ -23,6 +30,9 @@ struct AppView: View {
                         )
                     }
                 }
+            }
+            await MainActor.run {
+                isLoading = false
             }
         }
     }

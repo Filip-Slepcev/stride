@@ -26,13 +26,12 @@ struct AuthView: View {
                             .padding(.vertical, 20)
                     }
                     .padding(.leading, 10)
-
                 }
                 .background(
                     RoundedRectangle(cornerRadius: 15)
                         .fill(Color.white)
                         .shadow(color: .gray, radius: 2, x: 0, y: 2)
-                )
+                ).padding(.top, 20)
                 .padding(.horizontal, 40)
                 .padding(.vertical, 50)
 

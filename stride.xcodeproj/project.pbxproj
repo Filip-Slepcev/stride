@@ -10,6 +10,7 @@
 		DC7F34A22DA8C2E50063685E /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC7F34A02DA8C2E50063685E /* LICENSE.txt */; };
 		DC7F34A32DA8C2E50063685E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DC7F34A12DA8C2E50063685E /* README.md */; };
 		DC7F34A92DA8C4560063685E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DC7F34A82DA8C4510063685E /* .gitignore */; };
+		DC7F34B22DA8CB680063685E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7F34B12DA8CB680063685E /* Launch Screen.storyboard */; };
 		DCE93CBA2DA4C80400FE8528 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = DCE93CB92DA4C80400FE8528 /* Auth */; };
 		DCE93CBC2DA4C80400FE8528 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = DCE93CBB2DA4C80400FE8528 /* PostgREST */; };
 		DCE93CBE2DA4C80400FE8528 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = DCE93CBD2DA4C80400FE8528 /* Storage */; };
@@ -35,32 +36,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DC28EF4F2DA4BCA100F926B3 /* strive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = strive.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC28EF5C2DA4BCA300F926B3 /* striveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = striveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC28EF662DA4BCA300F926B3 /* striveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = striveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC28EF4F2DA4BCA100F926B3 /* stride.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stride.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC28EF5C2DA4BCA300F926B3 /* strideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = strideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC28EF662DA4BCA300F926B3 /* strideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = strideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC7F34A02DA8C2E50063685E /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		DC7F34A12DA8C2E50063685E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DC7F34A82DA8C4510063685E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		DC7F34B12DA8CB680063685E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		DCE93CDD2DA4CF3B00FE8528 /* releases.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = releases.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		DCE93D002DA56C9C00FE8528 /* Exceptions for "strive" folder in "strive" target */ = {
+		DCE93D002DA56C9C00FE8528 /* Exceptions for "stride" folder in "stride" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = DC28EF4E2DA4BCA100F926B3 /* strive */;
+			target = DC28EF4E2DA4BCA100F926B3 /* stride */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		DC28EF512DA4BCA100F926B3 /* strive */ = {
+		DC28EF512DA4BCA100F926B3 /* stride */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				DCE93D002DA56C9C00FE8528 /* Exceptions for "strive" folder in "strive" target */,
+				DCE93D002DA56C9C00FE8528 /* Exceptions for "stride" folder in "stride" target */,
 			);
-			path = strive;
+			path = stride;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -97,8 +99,9 @@
 		DC28EF462DA4BCA100F926B3 = {
 			isa = PBXGroup;
 			children = (
+				DC7F34B12DA8CB680063685E /* Launch Screen.storyboard */,
 				DC7F34A82DA8C4510063685E /* .gitignore */,
-				DC28EF512DA4BCA100F926B3 /* strive */,
+				DC28EF512DA4BCA100F926B3 /* stride */,
 				DC28EF502DA4BCA100F926B3 /* Products */,
 				DCE93CDD2DA4CF3B00FE8528 /* releases.xcconfig */,
 				DC7F34A02DA8C2E50063685E /* LICENSE.txt */,
@@ -109,9 +112,9 @@
 		DC28EF502DA4BCA100F926B3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DC28EF4F2DA4BCA100F926B3 /* strive.app */,
-				DC28EF5C2DA4BCA300F926B3 /* striveTests.xctest */,
-				DC28EF662DA4BCA300F926B3 /* striveUITests.xctest */,
+				DC28EF4F2DA4BCA100F926B3 /* stride.app */,
+				DC28EF5C2DA4BCA300F926B3 /* strideTests.xctest */,
+				DC28EF662DA4BCA300F926B3 /* strideUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,9 +122,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DC28EF4E2DA4BCA100F926B3 /* strive */ = {
+		DC28EF4E2DA4BCA100F926B3 /* stride */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC28EF702DA4BCA300F926B3 /* Build configuration list for PBXNativeTarget "strive" */;
+			buildConfigurationList = DC28EF702DA4BCA300F926B3 /* Build configuration list for PBXNativeTarget "stride" */;
 			buildPhases = (
 				DC28EF4B2DA4BCA100F926B3 /* Sources */,
 				DC28EF4C2DA4BCA100F926B3 /* Frameworks */,
@@ -132,9 +135,9 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				DC28EF512DA4BCA100F926B3 /* strive */,
+				DC28EF512DA4BCA100F926B3 /* stride */,
 			);
-			name = strive;
+			name = stride;
 			packageProductDependencies = (
 				DCE93CB92DA4C80400FE8528 /* Auth */,
 				DCE93CBB2DA4C80400FE8528 /* PostgREST */,
@@ -142,12 +145,12 @@
 				DCE93CBF2DA4C80400FE8528 /* Supabase */,
 			);
 			productName = strive;
-			productReference = DC28EF4F2DA4BCA100F926B3 /* strive.app */;
+			productReference = DC28EF4F2DA4BCA100F926B3 /* stride.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DC28EF5B2DA4BCA300F926B3 /* striveTests */ = {
+		DC28EF5B2DA4BCA300F926B3 /* strideTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC28EF732DA4BCA300F926B3 /* Build configuration list for PBXNativeTarget "striveTests" */;
+			buildConfigurationList = DC28EF732DA4BCA300F926B3 /* Build configuration list for PBXNativeTarget "strideTests" */;
 			buildPhases = (
 				DC28EF582DA4BCA300F926B3 /* Sources */,
 				DC28EF592DA4BCA300F926B3 /* Frameworks */,
@@ -158,16 +161,16 @@
 			dependencies = (
 				DC28EF5E2DA4BCA300F926B3 /* PBXTargetDependency */,
 			);
-			name = striveTests;
+			name = strideTests;
 			packageProductDependencies = (
 			);
 			productName = striveTests;
-			productReference = DC28EF5C2DA4BCA300F926B3 /* striveTests.xctest */;
+			productReference = DC28EF5C2DA4BCA300F926B3 /* strideTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DC28EF652DA4BCA300F926B3 /* striveUITests */ = {
+		DC28EF652DA4BCA300F926B3 /* strideUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC28EF762DA4BCA300F926B3 /* Build configuration list for PBXNativeTarget "striveUITests" */;
+			buildConfigurationList = DC28EF762DA4BCA300F926B3 /* Build configuration list for PBXNativeTarget "strideUITests" */;
 			buildPhases = (
 				DC28EF622DA4BCA300F926B3 /* Sources */,
 				DC28EF632DA4BCA300F926B3 /* Frameworks */,
@@ -178,11 +181,11 @@
 			dependencies = (
 				DC28EF682DA4BCA300F926B3 /* PBXTargetDependency */,
 			);
-			name = striveUITests;
+			name = strideUITests;
 			packageProductDependencies = (
 			);
 			productName = striveUITests;
-			productReference = DC28EF662DA4BCA300F926B3 /* striveUITests.xctest */;
+			productReference = DC28EF662DA4BCA300F926B3 /* strideUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -208,7 +211,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DC28EF4A2DA4BCA100F926B3 /* Build configuration list for PBXProject "strive" */;
+			buildConfigurationList = DC28EF4A2DA4BCA100F926B3 /* Build configuration list for PBXProject "stride" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -225,9 +228,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DC28EF4E2DA4BCA100F926B3 /* strive */,
-				DC28EF5B2DA4BCA300F926B3 /* striveTests */,
-				DC28EF652DA4BCA300F926B3 /* striveUITests */,
+				DC28EF4E2DA4BCA100F926B3 /* stride */,
+				DC28EF5B2DA4BCA300F926B3 /* strideTests */,
+				DC28EF652DA4BCA300F926B3 /* strideUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -237,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7F34B22DA8CB680063685E /* Launch Screen.storyboard in Resources */,
 				DC7F34A92DA8C4560063685E /* .gitignore in Resources */,
 				DC7F34A22DA8C2E50063685E /* LICENSE.txt in Resources */,
 				DC7F34A32DA8C2E50063685E /* README.md in Resources */,
@@ -287,12 +291,12 @@
 /* Begin PBXTargetDependency section */
 		DC28EF5E2DA4BCA300F926B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DC28EF4E2DA4BCA100F926B3 /* strive */;
+			target = DC28EF4E2DA4BCA100F926B3 /* stride */;
 			targetProxy = DC28EF5D2DA4BCA300F926B3 /* PBXContainerItemProxy */;
 		};
 		DC28EF682DA4BCA300F926B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DC28EF4E2DA4BCA100F926B3 /* strive */;
+			target = DC28EF4E2DA4BCA100F926B3 /* stride */;
 			targetProxy = DC28EF672DA4BCA300F926B3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -351,6 +355,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				"INFOPLIST_KEY_UILaunchStoryboardName[sdk=*]" = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -409,6 +416,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -433,6 +442,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
@@ -463,6 +473,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
@@ -493,7 +504,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/strive.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/strive";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stride.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/stride";
 			};
 			name = Debug;
 		};
@@ -511,7 +522,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/strive.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/strive";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stride.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/stride";
 			};
 			name = Release;
 		};
@@ -550,7 +561,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DC28EF4A2DA4BCA100F926B3 /* Build configuration list for PBXProject "strive" */ = {
+		DC28EF4A2DA4BCA100F926B3 /* Build configuration list for PBXProject "stride" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC28EF6E2DA4BCA300F926B3 /* Debug */,
@@ -559,7 +570,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC28EF702DA4BCA300F926B3 /* Build configuration list for PBXNativeTarget "strive" */ = {
+		DC28EF702DA4BCA300F926B3 /* Build configuration list for PBXNativeTarget "stride" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC28EF712DA4BCA300F926B3 /* Debug */,
@@ -568,7 +579,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC28EF732DA4BCA300F926B3 /* Build configuration list for PBXNativeTarget "striveTests" */ = {
+		DC28EF732DA4BCA300F926B3 /* Build configuration list for PBXNativeTarget "strideTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC28EF742DA4BCA300F926B3 /* Debug */,
@@ -577,7 +588,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DC28EF762DA4BCA300F926B3 /* Build configuration list for PBXNativeTarget "striveUITests" */ = {
+		DC28EF762DA4BCA300F926B3 /* Build configuration list for PBXNativeTarget "strideUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DC28EF772DA4BCA300F926B3 /* Debug */,
