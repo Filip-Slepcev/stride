@@ -4,8 +4,7 @@ import SwiftUI
 struct ProfileDetailSection: View {
     @Binding var imageSelection: PhotosPickerItem?
     @Binding var username: String
-    @Binding var fullName: String
-    @Binding var website: String
+    @Binding var bio: String
     @Binding var avatarImage: AvatarImage?
 
     var body: some View {
@@ -26,10 +25,7 @@ struct ProfileDetailSection: View {
             .textContentType(.username)
             .textInputAutocapitalization(.never)
 
-        TextField("Full name", text: $fullName)
-            .textContentType(.name)
-
-        TextField("Website", text: $website)
+        TextField("Bio", text: $bio)
             .textContentType(.URL)
             .textInputAutocapitalization(.never)
     }
@@ -38,8 +34,7 @@ struct ProfileDetailSection: View {
 struct ProfileView: View {
     @EnvironmentObject private var activeUser: ActiveUser
     @State private var username = ""
-    @State private var fullName = ""
-    @State private var website = ""
+    @State private var bio = ""
     @State private var avatarImage: AvatarImage?
 
     @State private var imageSelection: PhotosPickerItem?
@@ -52,8 +47,7 @@ struct ProfileView: View {
                     ProfileDetailSection(
                         imageSelection: $imageSelection,
                         username: $username,
-                        fullName: $fullName,
-                        website: $website,
+                        bio: $bio,
                         avatarImage: $avatarImage
                     )
                 }
@@ -66,21 +60,18 @@ struct ProfileView: View {
                         ProgressView()
                     }
                 }
-            }
-            .navigationTitle("Profile")
-            .toolbar {
-                ToolbarItem {
-                    Button("Sign out", role: .destructive) {
-                        Task {
-                            await activeUser.logout()
-                        }
+                Section {
+                    Button("Sign out") {
+                        signOut()
                     }
+                    .bold()
+                    .foregroundColor(.red)
                 }
             }
+            .navigationTitle("Profile")
             .onAppear {
                 username = activeUser.username ?? ""
-                fullName = activeUser.fullName ?? ""
-                website = activeUser.website ?? ""
+                bio = activeUser.bio ?? ""
                 avatarImage = activeUser.avatarImage
             }
             .onChange(of: imageSelection) { _, newValue in
@@ -90,13 +81,18 @@ struct ProfileView: View {
         }
     }
 
+    private func signOut() {
+        Task {
+            await activeUser.logout()
+        }
+    }
+
     private func onUpdateProfile() {
         Task {
             isLoading = true
             await activeUser.updateProfile(
                 username: username,
-                fullName: fullName,
-                website: website
+                bio: bio
             )
             isLoading = false
         }

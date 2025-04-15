@@ -2,42 +2,42 @@ import Foundation
 import Storage
 import SwiftUI
 
-struct ProfileService {
+enum ProfileService {
     static func getProfile(userId: UUID) async -> Profile? {
-        do{
+        do {
             let profile: Profile =
-            try await supabase
-                .from("profiles")
-                .select()
-                .eq("id", value: userId)
-                .single()
-                .execute()
-                .value
+                try await supabase
+                    .from("profiles")
+                    .select()
+                    .eq("id", value: userId)
+                    .single()
+                    .execute()
+                    .value
             
             return profile
-        }catch {
+        } catch {
             return nil
         }
     }
     
     static func getProfileAvatar(avatarURL: String) async -> AvatarImage? {
-        do{
+        do {
             let data = try await supabase.storage.from("avatars").download(path: avatarURL)
             return AvatarImage(data: data)
-        }catch {
+        } catch {
             return nil
         }
     }
     
-    static func updateProfile(userId: UUID, username: String?, fullName: String?, website: String?)
+    static func updateProfile(userId: UUID, username: String?, bio: String?)
         async
     {
         do {
             try await supabase
                 .from("profiles")
                 .update([
-                    "username": username, "full_name": fullName,
-                    "website": website,
+                    "username": username,
+                    "bio": bio,
                 ])
                 .eq("id", value: userId)
                 .execute()
@@ -46,7 +46,7 @@ struct ProfileService {
         }
     }
     
-    static func updateAvatar(userId: UUID, image: AvatarImage?) async -> String? {
+    static func updateAvatar(userId: UUID, image: AvatarImage?, oldImageUrl: String?) async -> String? {
         do {
             guard let data = image?.data else { return nil }
             
@@ -59,6 +59,9 @@ struct ProfileService {
                     data: data,
                     options: FileOptions(contentType: "image/jpeg")
                 )
+            if let oldImageUrl = oldImageUrl {
+                try await supabase.storage.from("avatars").remove(paths: [oldImageUrl])
+            }
             try await supabase
                 .from("profiles")
                 .update(["avatar_url": filePath])

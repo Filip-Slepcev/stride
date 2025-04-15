@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC64C1942DA8E53F003D8C68 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = DC64C1932DA8E53F003D8C68 /* Auth */; };
+		DC64C1962DA8E53F003D8C68 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = DC64C1952DA8E53F003D8C68 /* Storage */; };
+		DC64C1982DA8E53F003D8C68 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = DC64C1972DA8E53F003D8C68 /* Supabase */; };
 		DC7F34A22DA8C2E50063685E /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC7F34A02DA8C2E50063685E /* LICENSE.txt */; };
 		DC7F34A32DA8C2E50063685E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DC7F34A12DA8C2E50063685E /* README.md */; };
 		DC7F34A92DA8C4560063685E /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DC7F34A82DA8C4510063685E /* .gitignore */; };
 		DC7F34B22DA8CB680063685E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC7F34B12DA8CB680063685E /* Launch Screen.storyboard */; };
-		DCE93CBA2DA4C80400FE8528 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = DCE93CB92DA4C80400FE8528 /* Auth */; };
-		DCE93CBC2DA4C80400FE8528 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = DCE93CBB2DA4C80400FE8528 /* PostgREST */; };
-		DCE93CBE2DA4C80400FE8528 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = DCE93CBD2DA4C80400FE8528 /* Storage */; };
-		DCE93CC02DA4C80400FE8528 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = DCE93CBF2DA4C80400FE8528 /* Supabase */; };
 		DCE93CDE2DA4CF3B00FE8528 /* releases.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DCE93CDD2DA4CF3B00FE8528 /* releases.xcconfig */; };
 /* End PBXBuildFile section */
 
@@ -36,9 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DC28EF4F2DA4BCA100F926B3 /* stride.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stride.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC28EF5C2DA4BCA300F926B3 /* strideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = strideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC28EF662DA4BCA300F926B3 /* strideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = strideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC054D482DA8E111009EB61A /* stride.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stride.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC054D492DA8E111009EB61A /* strideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = strideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC054D4A2DA8E111009EB61A /* strideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = strideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC64C19C2DA8E743003D8C68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC7F34A02DA8C2E50063685E /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		DC7F34A12DA8C2E50063685E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DC7F34A82DA8C4510063685E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -46,22 +46,9 @@
 		DCE93CDD2DA4CF3B00FE8528 /* releases.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = releases.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		DCE93D002DA56C9C00FE8528 /* Exceptions for "stride" folder in "stride" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = DC28EF4E2DA4BCA100F926B3 /* stride */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DC28EF512DA4BCA100F926B3 /* stride */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				DCE93D002DA56C9C00FE8528 /* Exceptions for "stride" folder in "stride" target */,
-			);
 			path = stride;
 			sourceTree = "<group>";
 		};
@@ -72,10 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCE93CC02DA4C80400FE8528 /* Supabase in Frameworks */,
-				DCE93CBE2DA4C80400FE8528 /* Storage in Frameworks */,
-				DCE93CBC2DA4C80400FE8528 /* PostgREST in Frameworks */,
-				DCE93CBA2DA4C80400FE8528 /* Auth in Frameworks */,
+				DC64C1962DA8E53F003D8C68 /* Storage in Frameworks */,
+				DC64C1942DA8E53F003D8C68 /* Auth in Frameworks */,
+				DC64C1982DA8E53F003D8C68 /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,21 +88,14 @@
 				DC7F34B12DA8CB680063685E /* Launch Screen.storyboard */,
 				DC7F34A82DA8C4510063685E /* .gitignore */,
 				DC28EF512DA4BCA100F926B3 /* stride */,
-				DC28EF502DA4BCA100F926B3 /* Products */,
 				DCE93CDD2DA4CF3B00FE8528 /* releases.xcconfig */,
 				DC7F34A02DA8C2E50063685E /* LICENSE.txt */,
 				DC7F34A12DA8C2E50063685E /* README.md */,
+				DC054D482DA8E111009EB61A /* stride.app */,
+				DC054D492DA8E111009EB61A /* strideTests.xctest */,
+				DC054D4A2DA8E111009EB61A /* strideUITests.xctest */,
+				DC64C19C2DA8E743003D8C68 /* Info.plist */,
 			);
-			sourceTree = "<group>";
-		};
-		DC28EF502DA4BCA100F926B3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DC28EF4F2DA4BCA100F926B3 /* stride.app */,
-				DC28EF5C2DA4BCA300F926B3 /* strideTests.xctest */,
-				DC28EF662DA4BCA300F926B3 /* strideUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,13 +118,12 @@
 			);
 			name = stride;
 			packageProductDependencies = (
-				DCE93CB92DA4C80400FE8528 /* Auth */,
-				DCE93CBB2DA4C80400FE8528 /* PostgREST */,
-				DCE93CBD2DA4C80400FE8528 /* Storage */,
-				DCE93CBF2DA4C80400FE8528 /* Supabase */,
+				DC64C1932DA8E53F003D8C68 /* Auth */,
+				DC64C1952DA8E53F003D8C68 /* Storage */,
+				DC64C1972DA8E53F003D8C68 /* Supabase */,
 			);
 			productName = strive;
-			productReference = DC28EF4F2DA4BCA100F926B3 /* stride.app */;
+			productReference = DC054D482DA8E111009EB61A /* stride.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DC28EF5B2DA4BCA300F926B3 /* strideTests */ = {
@@ -165,7 +143,7 @@
 			packageProductDependencies = (
 			);
 			productName = striveTests;
-			productReference = DC28EF5C2DA4BCA300F926B3 /* strideTests.xctest */;
+			productReference = DC054D492DA8E111009EB61A /* strideTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		DC28EF652DA4BCA300F926B3 /* strideUITests */ = {
@@ -185,7 +163,7 @@
 			packageProductDependencies = (
 			);
 			productName = striveUITests;
-			productReference = DC28EF662DA4BCA300F926B3 /* strideUITests.xctest */;
+			productReference = DC054D4A2DA8E111009EB61A /* strideUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -221,10 +199,10 @@
 			mainGroup = DC28EF462DA4BCA100F926B3;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				DC28EF792DA4C58300F926B3 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				DC64C1922DA8E53F003D8C68 /* XCRemoteSwiftPackageReference "supabase-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = DC28EF502DA4BCA100F926B3 /* Products */;
+			productRefGroup = DC28EF462DA4BCA100F926B3;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -357,7 +335,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
-				"INFOPLIST_KEY_UILaunchStoryboardName[sdk=*]" = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -433,12 +410,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = stride/stride.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8GNSZM5GXB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = strive/Info.plist;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -451,8 +431,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = UiTutorial.strive;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mystride.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -464,12 +445,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = stride/stride.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8GNSZM5GXB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = strive/Info.plist;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -482,8 +466,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = UiTutorial.strive;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mystride.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -600,7 +585,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DC28EF792DA4C58300F926B3 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+		DC64C1922DA8E53F003D8C68 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/supabase/supabase-swift";
 			requirement = {
@@ -611,24 +596,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DCE93CB92DA4C80400FE8528 /* Auth */ = {
+		DC64C1932DA8E53F003D8C68 /* Auth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DC28EF792DA4C58300F926B3 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = DC64C1922DA8E53F003D8C68 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Auth;
 		};
-		DCE93CBB2DA4C80400FE8528 /* PostgREST */ = {
+		DC64C1952DA8E53F003D8C68 /* Storage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DC28EF792DA4C58300F926B3 /* XCRemoteSwiftPackageReference "supabase-swift" */;
-			productName = PostgREST;
-		};
-		DCE93CBD2DA4C80400FE8528 /* Storage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DC28EF792DA4C58300F926B3 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = DC64C1922DA8E53F003D8C68 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Storage;
 		};
-		DCE93CBF2DA4C80400FE8528 /* Supabase */ = {
+		DC64C1972DA8E53F003D8C68 /* Supabase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DC28EF792DA4C58300F926B3 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = DC64C1922DA8E53F003D8C68 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Supabase;
 		};
 /* End XCSwiftPackageProductDependency section */

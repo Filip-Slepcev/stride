@@ -5,7 +5,8 @@ struct HomeView: View {
 
     var body: some View {
         VStack {
-        }
-        .padding(.bottom, 40)
+            Image(systemName: "figure.run.square.stack").resizable().frame(width: 200, height: 200)
+        }.navigationTitle("Home")
+            .padding(.bottom, 40)
     }
 }
