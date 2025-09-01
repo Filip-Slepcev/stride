@@ -1,47 +1,5 @@
 import SwiftUI
 
-private struct sheetOption: View {
-    var color: Color
-    var systemName: String
-    var title: String
-
-    var body: some View {
-        ZStack(alignment: .top) {
-            RoundedRectangle(cornerRadius: 10).fill(.white).frame(width: 175, height: 100)
-            ZStack(alignment: .center) {
-                Circle().fill(color).frame(width: 35, height: 35)
-                Image(systemName: systemName).resizable().frame(width: 20, height: 20).foregroundColor(.white)
-
-            }.offset(y: 10)
-            Text(title).offset(y: 50)
-        }
-    }
-}
-
-private struct WorkoutSheetView: View {
-    var body: some View {
-        ZStack {
-            Color.black.opacity(0.03).edgesIgnoringSafeArea(.all)
-            VStack {
-                RoundedRectangle(cornerRadius: 25).fill(.black.opacity(0.1)).frame(
-                    width: UIScreen.width / 3,
-                    height: 5
-                ).padding(.top, 5)
-                Spacer()
-                HStack {
-                    Spacer()
-                    sheetOption(color: Color.blue.opacity(0.7), systemName: "pencil", title: "Plan Workout")
-                    Spacer()
-                    sheetOption(color: Color.red.opacity(0.7), systemName: "record.circle", title: "Record Workout")
-                    Spacer()
-                }
-                Spacer()
-            }
-
-        }.presentationDetents([.height(200)])
-    }
-}
-
 private struct LoadingView: View {
     var loadingOpacity: Double
     var body: some View {
@@ -75,47 +33,115 @@ private struct WelcomeView: View {
     }
 }
 
+private struct sheetOption: View {
+    var color: Color
+    var systemName: String
+    var title: String
+
+    var body: some View {
+        ZStack(alignment: .top) {
+            RoundedRectangle(cornerRadius: 10).fill(.white).frame(
+                width: 175,
+                height: 100
+            )
+            ZStack(alignment: .center) {
+                Circle().fill(color).frame(width: 35, height: 35)
+                Image(systemName: systemName).resizable().frame(
+                    width: 20,
+                    height: 20
+                ).foregroundColor(.white)
+
+            }.offset(y: 10)
+            Text(title).offset(y: 50).foregroundStyle(.black)
+        }
+    }
+}
+
+private struct WorkoutSheetView: View {
+    @SwiftUI.Environment(\.dismiss) private var dismiss
+    @EnvironmentObject private var activeUser: ActiveUser
+
+    var body: some View {
+        NavigationStack {
+            ZStack {
+                Color.black.opacity(0.05).edgesIgnoringSafeArea(.all)
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+
+                        NavigationLink(destination: WorkoutView(isPlanned: true).environmentObject(activeUser)) {
+                            sheetOption(
+                                color: Color.blue.opacity(0.9),
+                                systemName: "pencil",
+                                title: "Plan Workout"
+                            ).environmentObject(activeUser)
+                        }
+
+                        Spacer()
+
+                        NavigationLink(destination: WorkoutView(isPlanned: false).environmentObject(activeUser)) {
+                            sheetOption(
+                                color: Color.red.opacity(0.9),
+                                systemName: "record.circle",
+                                title: "Record Workout"
+                            )
+                        }
+
+                        Spacer()
+                    }
+                    Spacer()
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(action: { dismiss() }) {
+                        Image(systemName: "chevron.left").resizable().frame(width: 10, height: 20).fontWeight(.semibold).padding(.leading, -5)
+                        Text("Back")
+                    }
+                }
+            }
+        }
+    }
+}
+
 struct MainTabView: View {
     @EnvironmentObject private var activeUser: ActiveUser
+
     @State var showWelcome: Bool
-    @State var loadingOpacity: Double = 1
-    @State var selectedTab: Int = 0
-    @State var showSheet: Bool = false
+    @State private var loadingOpacity: Double = 1
+
+    @State private var selectedTab: Int = 0
+    @State private var showSheet: Bool = false
 
     var body: some View {
         ZStack {
-            TabView(selection: $selectedTab) {
-                HomeView()
-                    .environmentObject(activeUser).tabItem {
-                        Image(systemName: "house")
-                    }.tag(0)
-                Color.clear.tabItem {
-                    Image(systemName: "plus.square").resizable().frame(width: 50, height: 50)
-                }.tag(1)
-                ProfileView()
-                    .environmentObject(activeUser).tabItem {
-                        Image(systemName: "person")
-                    }.tag(2)
-            }.onChange(of: selectedTab) { oldState, newState in
-                if newState == 1 {
-                    selectedTab = oldState
-                    showSheet = true
+            TabView {
+                Tab("Home", systemImage: "house") {
+                    HomeView()
+                        .environmentObject(activeUser)
                 }
-            }.sheet(isPresented: $showSheet) {
-                WorkoutSheetView()
-            }.onAppear { UITabBar.appearance().unselectedItemTintColor = UIColor(Color.black) }
+                Tab("", systemImage: "plus.square") {
+                    WorkoutSheetView().environmentObject(activeUser)
+                }
+                Tab("Profile", systemImage: "person") {
+                    ProfileView()
+                        .environmentObject(activeUser)
+                }
+            }
 
+            // Welcome Back Cover
             if showWelcome {
                 WelcomeView(name: activeUser.username ?? "").transition(
                     .opacity
                 )
             }
 
-            // Loading cover
+            // Loading Cover
             LoadingView(loadingOpacity: loadingOpacity)
-
-        }.onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 withAnimation(.easeIn(duration: 0.1)) {
                     loadingOpacity = 0
                 }
@@ -127,4 +153,9 @@ struct MainTabView: View {
             }
         }
     }
+}
+
+#Preview {
+    var activeUser = ActiveUser()
+    MainTabView(showWelcome: false).environmentObject(activeUser)
 }

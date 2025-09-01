@@ -1,8 +1,8 @@
 import Foundation
 import Storage
-import SwiftUI
 
-enum ProfileService {
+
+struct ProfileService {
     static func getProfile(userId: UUID) async -> Profile? {
         do {
             let profile: Profile =
